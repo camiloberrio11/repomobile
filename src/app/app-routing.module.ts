@@ -12,9 +12,13 @@ const routes: Routes = [
     loadChildren: () => import('./feature/login/login.module').then( m => m.LoginPageModule)
   },
   {
+    path: 'main-record-locator',
+    loadChildren: () => import('./feature/main-record-locator/main-record-locator.module').then( m => m.MainRecordLocatorPageModule)
+  },
+  {
     path: '**',
     redirectTo: 'login'
-  }
+  },
 ];
 
 @NgModule({
