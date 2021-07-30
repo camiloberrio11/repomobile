@@ -19,10 +19,10 @@ const routes: Routes = [
     path: 'reservation-menu/:recordlocator',
     loadChildren: () => import('./feature/reservation-menu/reservation-menu.module').then( m => m.ReservationMenuPageModule)
   },
-  {
-    path: '**',
-    redirectTo: 'login'
-  },
+  // {
+  //   path: '**',
+  //   redirectTo: 'login'
+  // },
 ];
 
 @NgModule({
