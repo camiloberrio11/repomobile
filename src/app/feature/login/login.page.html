@@ -1,9 +1,49 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <ion-title>App GoNow</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <!-- Card presentation Init -->
+  <form [formGroup]="formLogin" (ngSubmit)="login()">
+    <ion-card>
+      <ion-item>
+        <ion-label>Usuario</ion-label>
+        <ion-input
+          formControlName="user"
+          type="text"
+          placeholder="Ingresa usuario..."
+        ></ion-input>
+      </ion-item>
 
+      <ion-item>
+        <ion-label>Contraseña</ion-label>
+        <ion-input
+          formControlName="password"
+          type="password"
+          placeholder="Ingresa password"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Dominio</ion-label>
+        <ion-input
+          formControlName="domain"
+          type="text"
+          placeholder="Ingresa dominio"
+        ></ion-input>
+      </ion-item>
+
+      <ion-button
+        [disabled]="formLogin.invalid"
+        (click)="login()"
+        expand="block"
+      >
+        Click me
+      </ion-button>
+    </ion-card>
+  </form>
+
+  <!-- Card presentation end -->
 </ion-content>

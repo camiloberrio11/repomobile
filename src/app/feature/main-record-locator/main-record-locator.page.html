@@ -1,9 +1,21 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>mainRecordLocator</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header title="Viva - Reservas"></app-header>
 
 <ion-content>
+  <form [formGroup]="recordLocatorForm" (ngSubmit)="getRecordLocator()">
+    <ion-card>
+      <ion-item>
+        <ion-label>Record locator</ion-label>
+        <ion-input formControlName="recordLocator" type="text" placeholder="Ingresa record locator"></ion-input>
+      </ion-item>
 
+      <ion-button
+        [disabled]="recordLocatorForm.invalid"
+        (click)="getRecordLocator()"
+        expand="block"
+        shape="round"
+      >
+        Buscar
+      </ion-button>
+    </ion-card>
+  </form>
 </ion-content>
