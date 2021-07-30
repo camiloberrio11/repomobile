@@ -16,6 +16,10 @@ const routes: Routes = [
     loadChildren: () => import('./feature/main-record-locator/main-record-locator.module').then( m => m.MainRecordLocatorPageModule)
   },
   {
+    path: 'reservation-menu/:recordlocator',
+    loadChildren: () => import('./feature/reservation-menu/reservation-menu.module').then( m => m.ReservationMenuPageModule)
+  },
+  {
     path: '**',
     redirectTo: 'login'
   },
