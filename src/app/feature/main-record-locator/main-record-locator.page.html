@@ -5,22 +5,68 @@
 </ion-header>
 
 
-<ion-content>
-  <form [formGroup]="recordLocatorForm" (ngSubmit)="getRecordLocator()">
-    <ion-card>
-      <ion-item>
-        <ion-label>Record locator</ion-label>
-        <ion-input formControlName="recordLocator" type="text" placeholder="Ingresa record locator"></ion-input>
-      </ion-item>
+<ion-content class="test">
+  <ion-slides class="mainSlide">
+    <ion-slide>
+      <form [formGroup]="recordLocatorForm" (ngSubmit)="getRecordLocator()">
+        <ion-grid fixed>
+          <ion-row>
+            <ion-col>
+              <img
+                src="https://res.cloudinary.com/dupegtamn/image/upload/v1619477220/Logo_Viva_Slogan__eeovab.svg"
+              />
+            </ion-col>
+          </ion-row>
 
-      <ion-button
-        [disabled]="recordLocatorForm.invalid"
-        (click)="getRecordLocator()"
-        expand="block"
-        shape="round"
-      >
-        Buscar
-      </ion-button>
-    </ion-card>
-  </form>
+          <ion-row>
+            <ion-col>
+              <ion-list>
+                <ion-item>
+                  <ion-label>Record locator</ion-label>
+                  <ion-input
+                    formControlName="recordLocator"
+                    type="text"
+                    placeholder="Ingresa record locator"
+                  ></ion-input>
+                </ion-item>
+
+                <!-- <ion-item>
+                  <ion-label>Contraseña</ion-label>
+                  <ion-input
+                    formControlName="password"
+                    type="password"
+                    placeholder="Ingresa password"
+                  ></ion-input>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label>Dominio</ion-label>
+                  <ion-input
+                    formControlName="domain"
+                    type="text"
+                    placeholder="Ingresa dominio"
+                  ></ion-input>
+                </ion-item> -->
+              </ion-list>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+              <ion-button
+                type="submit"
+                color="tertiary"
+                shape="round"
+                [disabled]="recordLocatorForm.invalid"
+                (click)="getRecordLocator()"
+                expand="block"
+              >
+                Buscar
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </form>
+    </ion-slide>
+  </ion-slides>
 </ion-content>
