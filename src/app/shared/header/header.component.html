@@ -1,17 +1,23 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-buttons slot="start">
-        <ion-back-button
-          mode="ios"
-          defaultHref="/"
-          text="Atrás"
-          color="primary"
-          mode="ios"
-        ></ion-back-button>
-      </ion-buttons>
+      <ion-back-button
+        mode="ios"
+        defaultHref="/"
+        text="Atrás"
+        color="primary"
+        mode="ios"
+      ></ion-back-button>
     </ion-buttons>
-
     <ion-title>{{ title }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon
+          slot="icon-only"
+          [name]="true ? 'person-outline' : 'person-outline'"
+        >
+        </ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
